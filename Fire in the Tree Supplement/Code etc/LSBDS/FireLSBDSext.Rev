@@ -1,0 +1,146 @@
+# Running LSBDS on Conifers
+# Orlando Schwery, 29. Jan. 2023
+
+# load tree
+observed_phylogeny <- readTrees("version_14/lesfinally2018.tre")[1]
+
+# helper variables, taxa, root age, tree length
+taxa <- observed_phylogeny.taxa()
+root <- observed_phylogeny.rootAge()
+tree_length <- observed_phylogeny.treeLength()
+
+# prepare vectors for MCMC moves and monitors
+moves    = VectorMoves()
+monitors = VectorMonitors()
+priormonitors = VectorMonitors()
+
+# What to run?
+runPrior  = TRUE  # run under prior only
+runMCMC   = TRUE  # run main MCMC analysis
+plotModel = TRUE  # plot DAG of model
+
+
+NUM_RATE_CATEGORIES = 3  # 3 speciation and 3 extinction ea, totals 9
+NUM_TOTAL_SPECIES = 614
+H = 0.587405
+mean_lam := ln(NUM_TOTAL_SPECIES/2)/observed_phylogeny.rootAge()
+
+speciation_mean ~ dnLoguniform( 1E-6, 1E2)
+speciation_mean.setValue(mean_lam)
+moves.append( mvScale(speciation_mean, lambda=1, tune=true, weight=2.0) )
+moves.append( mvSlide(speciation_mean, delta=1, tune=true, weight=2.0) )
+
+speciation_sd ~ dnExponential( 1.0 / H )
+speciation_sd.setValue(1.0)
+moves.append( mvScale(speciation_sd, lambda=1, tune=true, weight=5.0) )
+moves.append( mvSlide(speciation_sd, delta=1, tune=true, weight=2.0) )
+
+speciation_categories := fnDiscretizeDistribution( dnLognormal(ln(speciation_mean), speciation_sd), NUM_RATE_CATEGORIES )
+
+extinction_mean ~ dnLoguniform( 1E-6, 1E2)
+extinction_mean.setValue( speciation_mean / 10.0 )
+moves.append( mvScale(extinction_mean, lambda=1, tune=true, weight=5.0) )
+moves.append( mvSlide(extinction_mean, delta=1, tune=true, weight=2.0) )
+
+extinction_sd ~ dnExponential( 1.0 / H )
+speciation_sd.setValue(1.0)
+moves.append( mvScale(extinction_sd, lambda=1, tune=true, weight=5.0) )
+moves.append( mvSlide(extinction_sd, delta=1, tune=true, weight=2.0) )
+
+extinction_categories := fnDiscretizeDistribution( dnLognormal(ln(extinction_mean), extinction_sd), NUM_RATE_CATEGORIES )
+
+k = 1
+for(i in 1:NUM_RATE_CATEGORIES) {
+    for(j in 1:NUM_RATE_CATEGORIES) {
+        speciation[k]   := speciation_categories[i]
+        extinction[k++] := extinction_categories[j]
+    }
+}
+
+
+############################################
+
+
+# calculate and record net diversification, turnover, and extinction fraction for convenience
+netdiv := speciation - extinction
+turnover := speciation + extinction
+extinction_frac := extinction / speciation
+
+
+# parameter for rate-shift events
+event_rate ~ dnUniform(0.0, 100.0/tree_length)
+event_rate.setValue(10.0/tree_length)
+moves.append( mvScale(event_rate, lambda=1, tune=true, weight=2.0) )
+moves.append( mvSlide(event_rate, delta=1, tune=true, weight=2.0) )
+
+# rate categories at root
+rate_cat_probs <- simplex( rep(1, NUM_RATE_CATEGORIES * NUM_RATE_CATEGORIES) )
+
+# Sampling fraction
+rho <- observed_phylogeny.ntips() / NUM_TOTAL_SPECIES
+
+
+timetree ~ dnCDBDP( rootAge           = root,
+                    speciationRates   = speciation,
+                    extinctionRates   = extinction,
+                    Q                 = fnJC(NUM_RATE_CATEGORIES*NUM_RATE_CATEGORIES),
+                    delta             = event_rate,
+                    pi                = rate_cat_probs,
+                    rho               = rho,
+                    condition         = "time" )
+
+timetree.clamp(observed_phylogeny)  # for some reason, this step takes REALLY long...
+
+mymodel = model(speciation)
+
+
+# Run under prior
+if (runPrior == TRUE) {
+    priormonitors.append( mnScreen(printgen=10, event_rate, speciation_mean, extinction_mean) )
+    priormonitors.append( mnModel(filename="version_14/output/LSBDSext_" + NUM_RATE_CATEGORIES + "_prior.log",printgen=1, separator = TAB) )
+    monitors.append(mnStochasticVariable(filename="version_14/output/LSBDSext_" + NUM_RATE_CATEGORIES + "_prior.var", printgen=1))
+
+    priormcmc = mcmc(mymodel, priormonitors, moves, nruns=1)
+
+    priormcmc.run(generations=100000, underPrior=TRUE)
+}
+
+# Run MCMC
+if (runMCMC == TRUE) {
+
+    monitors.append( mnScreen(printgen=10, event_rate, speciation_mean, extinction_mean) )
+    monitors.append( mnModel(filename="version_14/output/LSBDSext_" + NUM_RATE_CATEGORIES + ".log",printgen=1, separator = TAB) )
+    monitors.append( mnStochasticBranchRate(cdbdp=timetree, printgen=1, filename="version_14/output/LSBDSext_" + NUM_RATE_CATEGORIES + "_rates.log") )
+    monitors.append(mnStochasticVariable(filename="version_14/output/LSBDSext_" + NUM_RATE_CATEGORIES + ".var", printgen=1))
+    # monitors to get rate cat reco
+    monitors.append(mnStochasticBranchStateTimes(timetree, filename="version_14/output/LSBDSext_" + NUM_RATE_CATEGORIES + "_time_in_states.log", printgen=1))
+    monitors.append(mnJointConditionalAncestralState(tree=timetree, cdbdp=timetree,
+                filename="version_14/output/LSBDSext_" + NUM_RATE_CATEGORIES + "_anc_states.log",
+                printgen=1,
+                type="NaturalNumbers",
+                withTips=TRUE, withStartStates=FALSE))
+
+    mymcmc = mcmc(mymodel, monitors, moves, nruns=1)
+
+    # Burnin with auto-tuning of moves
+    mcmc_burnin=1000
+    mymcmc.burnin(mcmc_burnin, tuningInterval=mcmc_burnin/5)
+
+
+    # Run
+    mymcmc.run(generations=100000)
+}
+
+# display operator summaries to check acceptance ratios of moves
+if (runPrior == TRUE) {
+    priormcmc.operatorSummary()
+}
+if (runMCMC == TRUE) {
+    mymcmc.operatorSummary()
+}
+
+if (plotModel == TRUE) {
+    mymodel.graph("version_14/output/LSBDSext_" + NUM_RATE_CATEGORIES + ".dot")
+}
+
+print("Done.")

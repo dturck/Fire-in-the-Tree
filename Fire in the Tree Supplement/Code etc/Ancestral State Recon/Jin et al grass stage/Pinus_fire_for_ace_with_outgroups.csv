@@ -1,0 +1,118 @@
+﻿Species_pee,Phylo_order,Spec,Genus_Species,Bark,Ser,Grass,Resprout,Pyrophillic,Reference
+alb_W249,86,albicaulis,Pinus_albicaulis,no,no,no,no,no,Stevens et al. 2019
+ari_W250,112,aristata,Pinus_aristata,no,no,no,no,no,FEIS 1990+
+ari_W177,37,arizonica,Pinus_arizonica,yes,no,no,no,yes,Rodriguez-Trejo and Fule 2003 
+arm_L001,76,armandii,Pinus_armandii,no,no,no,no,no,Earle 1997+
+arm_L002,77,armandii,Pinus_armandii,no,no,no,no,no,Earle 1997+
+att_W133,29,attenuata,Pinus_attenuata,no,yes,no,no,yes,Rodriguez-Trejo and Fule 2003 
+aya_W119,89,ayacahuite,Pinus_ayacahuite,yes,no,no,no,yes,Rodriguez-Trejo and Fule 2003 
+bal_W175,110,balfouriana,Pinus_balfouriana,no,no,no,no,no,FEIS 1990+
+ban_W201,25,banksiana,Pinus_banksiana,no,yes,no,no,yes,FEIS 1990+ 1990
+bhu_W161,75,bhutanica,Pinus_bhutanica,no,no,no,no,no,Wakimoto 2010; Earle 1997+ 
+bru_W182,68,brutia,Pinus_brutia,yes,yes,no,no,yes,Tapias et al. 2004; Turck 2011
+bun_W105,99,bungeana,Pinus_bungeana,no,no,no,no,no,Earle 1997+
+can_W179,64,canariensis,Pinus_canariensis,yes,yes,no,yes,yes,Climent et al. 2004
+car_W196,15,caribea_hondurensis,Pinus_caribaea,yes,no,no,yes,yes,rodriguez-trejo and fule 2003
+cem_W112,84,cembra,Pinus_cembra,no,no,no,no,no,Earle 1997+
+cem_W107,104,cembroides,Pinus_cembroides,no,no,no,no,no,FEIS 1990+
+chi_J038,93,chiapensis,Pinus_chiapensis,yes,no,no,no,yes,Perry 1991
+cla_W192,27,clausa,Pinus_clausa,no,yes,no,no,yes,FEIS 1990+
+con_W319,24,contorta,Pinus_contorta,no,yes,no,no,yes,FEIS 1990+
+cou_W248,44,coulteri,Pinus_coulteri,yes,yes,no,no,yes,Rodriguez-Trejo and Fule 2003; FEIS 1990+ 
+cul_J009,100,culminicola,Pinus_culminicola,no,no,no,no,no,Perry 1991
+dab_L008,78,dabeshanensis,Pinus_dabeshanensis,no,no,no,no,no,Earle 1997+
+dal_W435,72,dalatensis,Pinus_dalatensis,no,no,no,no,no,Earle 1997+
+den_W200,51,densata,Pinus_densata,no,no,no,no,no,Earle 1997+; Farjon 2017
+den_W391,59,densifolia,Pinus_densiflora,no,no,no,no,no,Seo and Choung 2014
+dev_W183,34,devoniana,Pinus_devoniana,yes,no,yes,no,yes,Rodriguez-Trejo and Fule 2003 
+dis_J026,101,discolor,Pinus_discolor,no,no,no,no,no,Earle 1997+
+dou_J020,31,douglasiana,Pinus_douglasiana,yes,no,no,no,yes,Perry 1991
+dur_W173,36,durangensis,Pinus_durangensis,yes,no,no,no,yes,Perry 1991
+ech_W181,19,echinata,Pinus_echinata,yes,no,no,yes,yes,FEIS 1990+
+edu_W156,103,edulis,Pinus_edulis,no,no,no,no,no,FEIS 1990+
+ell_W251,16,elliotii,Pinus_elliottii,yes,no,yes,yes,yes,FEIS 1990+; Meyers and Rodriguez Trejo CH 20
+eng_W253,38,englemannii,Pinus_engelmannii,yes,no,yes,no,yes,Rodriguez-Trejo and Fule 2003 
+fen_W103,79,fenzeliama,Pinus_fenzeliana,no,no,no,no,no,Farjon 2017
+fle_W344,90,flexilis,Pinus_flexilis,no,no,no,no,no,FEIS 1990+
+geo_J065,4,georginae,Pinus_georginae,no,no,no,no,no,Earle 1997+
+ger_W402,97,gerardiana,Pinus_gerardiana,no,no,no,no,no,Earle 1997+
+gla_W198,20,glabra,Pinus_glabra,no,no,no,no,no,FEIS 1990+
+gre_J014,12,greggii,Pinus_greggii,yes,yes,no,no,yes,Rodriguez-Trejo and Fule 2003 
+hal_W204,67,halepensis,Pinus_halepensis,no,yes,no,no,yes,Tapias et al. 2004
+har_J010,39,hartwegii,Pinus_hartwegii,yes,no,yes,yes,yes,Rodriguez-Trejo and Fule 2003 
+hel_W287,70,helderichii,Pinus_heldreichii,yes,no,no,no,yes,Vasileva and Panayotov 2015
+hen_W254,48,henryi,Pinus_henryi,no,no,no,no,no,Earle 1997+
+her_J040,7,herrarae,Pinus_herrerae,yes,no,no,no,yes,Rodriguez-Trejo and Fule 2003 
+hwa_W349,46,hwangshensis,Pinus_hwangshanensis,no,no,no,no,no,Farjon 2017
+jal_J046,2,jaliscana,Pinus_jaliscana,yes,yes,no,no,yes,rodriguez-trejo and fule 2003
+jef_W168,45,jeffrey,Pinus_jeffreyi,yes,no,no,no,yes,FEIS 1990+
+kes_W281,52,kesiya,Pinus_kesiya,yes,no,no,no,yes,Earle 1997+
+kor_L004,85,koraiensis,Pinus_koraiensis,no,no,no,no,no,Chun 1994
+kre_W428,96,krempfii,Pinus_krempfii,no,no,no,no,no,Earle 1997+
+kwa_W102,71,kwangtungensis,Pinus_kwangtungensis,no,no,no,no,no,Earle 1997+
+lam_W111,94,lambertiana,Pinus_lambertiana,yes,no,no,no,yes,FEIS 1990+
+lat_W166,62,latteri,Pinus_latteri,yes,no,yes,no,yes,Thomas 2019. 
+law_W193,9,lawsonia,Pinus_lawsonii,yes,no,no,no,yes,Rodriguez-Trejo and Fule 2003 
+lei_W125,5,leiophylla,Pinus_leiophylla,yes,yes,no,yes,yes,Rodriguez-Trejo and Fule 2003 
+lon_W127,111,longaeva,Pinus_longaeva,no,no,no,no,no,FEIS 1990+
+luc_J005,54,luchensis,Pinus_luchuensis,no,no,no,no,no,na;Earle 1997+
+lum_J004,6,lumholtzii,Pinus_lumholtzii,yes,no,no,yes,yes,Perry 1991
+luz_J043,3,luzumariae,Pinus_luzmariae,no,no,no,no,no,Farjon 2017
+mas_W348,55,massonia,Pinus_massoniana,yes,no,no,no,yes,Farjon 2017
+mas_J012,80,mastersiana,Pinus_armandii_mastersiana,no,no,no,no,no,Earle 1997+
+max_W399,108,maximartinezii,Pinus_maximartinezii,no,no,no,no,no,Perry 1991
+max_W271,32,maximinoi,Pinus_maximinoi,yes,no,no,no,yes,perry 1991
+mer_W327,63,merkusii,Pinus_merkusii,yes,no,yes,no,yes,Koskela et al. 1995
+mon_W151,106,monophylla,Pinus_monophylla,no,no,no,no,no,FEIS 1990+
+mon_W145,35,montezumae,Pinus_montezumae,yes,no,yes,no,yes,Rodriguez-Trejo and Fule 2003 
+mon_W275,91,monticola,Pinus_monticola,yes,no,no,no,yes,FEIS 1990+
+mor_J001,74,morrisoncola,Pinus_morrisonicola,no,no,no,no,no,Earle 1997+ 2006
+mug_N033,56,mugo,Pinus_mugo,no,no,no,no,no,Earle 1997+
+mug_W284,57,mugo_unicata,Pinus_mugo,no,no,no,no,no,Earle 1997+
+mur_W406,30,muricata,Pinus_muricata,yes,yes,no,no,yes,FEIS 1990+
+nel_J039,113,nelsonii,Pinus_nelsonii,no,no,no,no,no,Earle 1997+
+nig_W134,60,nigra,Pinus_nigra,yes,no,no,no,yes,Fernandes et al. 2008
+ooc_W136,13,oocarpa,Pinus_oocarpa,yes,yes,no,yes,yes,Rodriguez-Trejo and Fule 2003: Ch 20 Tropic
+pal_W279,17,palustris,Pinus_palustris,yes,no,yes,no,yes,FEIS 1990+
+par_W256,82,parviflora,Pinus_parviflora,no,no,no,no,no,Earle 1997+
+pat_W315,10,patula,Pinus_patula,yes,yes,no,yes,yes,Rodriguez-Trejo and Fule 2003 
+peu_W120,95,peuce,Pinus_peuce,no,no,no,no,no,Fernandes et al. 2008
+pin_W291,69,pinaster,Pinus_pinaster,yes,yes,no,no,yes,Tapias et al. 2004
+pin_J007,107,pinceana,Pinus_pinceana,no,no,no,no,no,Perry 1991
+pin_W118,66,pinea,Pinus_pinea,yes,no,no,no,yes,Tapias et al. 2004
+pon_W262,41,ponderosa,Pinus_ponderosa,yes,no,no,no,yes,FEIS 1990+
+pra_J034,1,praetermissa,Pinus_praetermissa,no,yes,no,no,no,Rodriguez-Trejo and Fule 2003 
+pri_J052,8,pringelei,Pinus_pringlei,yes,yes,no,yes,yes,Rodriguez-Trejo and Fule 2003 
+pse_W199,33,pseudostrobus,Pinus_pseudostrobus,yes,yes,no,yes,yes,Rodriguez-Trejo and Fule 2003 
+pum_W343,87,pumila,Pinus_pumila,no,no,no,no,no,Weaver 1994
+pun_W203,23,pungens,Pinus_pungens,yes,yes,no,no,yes,FEIS 1990+
+qua_J002,105,quadrifolia,Pinus_quadrifolia,no,no,no,no,no,FEIS 1990+
+rad_W174,28,radiata,Pinus_radiata,no,yes,no,no,yes,FEIS 1990+
+rem_J041,102,remota,Pinus_remota,no,no,no,no,no,Perry 1991
+res_W202,61,resinosa,Pinus_resinosa,yes,no,no,no,yes,Heinselmann 1996
+rig_W132,22,rigida,Pinus_rigida,yes,yes,no,yes,yes,FEIS 1990+
+rox_W401,65,roxburghii,Pinus_roxburghii,yes,no,no,no,yes,Wakimoto 2010; Turck 2015
+rze_J024,109,rzedowskii,Pinus_rzedowskii,no,no,no,no,no,Farjon 2017
+sab_W367,42,sabiniana,Pinus_sabiniana,yes,no,no,no,yes,FEIS 1990+
+ser_W135,21,serotina,Pinus_serotina,no,yes,no,yes,yes,FEIS 1990+
+sib_J036,83,sibirica,Pinus_sibirica,no,no,no,no,no,Weaver 1994
+squ_W297,98,squamata,Pinus_squamata,no,no,no,no,no,Earle 1997+
+str_W320,88,strobiformis,Pinus_strobiformis,no,no,no,no,no,FEIS 1990+
+str_W267,92,strobus,Pinus_strobus,yes,no,no,no,yes,Heinselmann 1996
+syl_W188,58,sylvestris,Pinus_sylvestris,yes,no,no,no,yes,FEIS 1990+
+tab_W106,49,tabuliformis,Pinus_tabuliformis,no,no,no,no,no,Earle 1997+
+tae_W274,18,taeda,Pinus_taeda,yes,no,no,no,yes,FEIS 1990+
+tai_W128,47,taiwanensis,Pinus_taiwanensis,no,no,no,no,no,na;Earle 1997+
+tec_W191,14,tecunumanii,Pinus_tecunumanii,no,yes,no,no,yes,perry 1991
+teo_W184,11,teocote,Pinus_teocote,yes,yes,no,yes,yes,Rodriguez-Trejo and Fule 2003 
+thu_W197,53,thunbergii,Pinus_thunbergii,no,no,no,no,no,Earle 1997+
+tor_W167,43,torreyana,Pinus_torreyana,no,yes,no,no,yes,FEIS 1990+
+vir_W295,26,virginiana,Pinus_tropicalis,yes,no,yes,yes,yes,Meyers and Rodriguez Trejo CH 20
+wal_W160,81,wallichiana,Pinus_virginiana,no,no,no,no,no,FEIS 1990+
+wan_L009,73,wangii,Pinus_wallichiana,no,no,no,no,no,Wakimoto 2010
+was_W170,40,washoensis,Pinus_wangii,no,no,no,no,no,Earle 1997+
+yun_W165,50,yunnanensis,Pinus_yunnanensis,no,yes,no,yes,yes,Pausas et al. 2021
+smi_S005,118,smithiana,Picea_smithiana,no,no,no,no,no,others
+abi_S002,117,abies,Picea_abies,no,no,no,no,no,others
+arg_S001,115,argyrophylla,Cathaya_argyrophylla,no,no,no,no,no,others
+bre_S003,116,breweriana,Picea_breweriana,no,no,no,no,no,others

@@ -1,0 +1,17 @@
+# turn LSBDS anc states into MAP tree files
+# Orlando Schwery, 13. May 2023
+
+current_model = "LSBDSext"
+current_ncats = "3"
+
+tree <- readTrees("version_14/lesfinally2018.tre")[1]
+
+anc_states = readAncestralStateTrace("version_14/output_uyedalab2/" + current_model + "_" + current_ncats + "_anc_states.log")
+
+anc_tree = ancestralStateTree(tree=tree,
+                  ancestral_state_trace_vector=anc_states,
+                  include_start_states=false,
+                  file="version_14/output_uyedalab2/" + current_model + "_" + current_ncats + "_anc_states.tree",
+                  burnin=0,
+                  summary_statistic="MAP",
+                  site=1)
