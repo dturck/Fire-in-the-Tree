@@ -1,0 +1,1 @@
+Please click on 'Fire the Tree Supplement' folder to view supplemental files for American Journal of Botany: Fire in the Tree: The Origin and Distribution of Fire-adapted Traits within Conifers and their Influence on Speciation Rates across the Conifer Phylogeny
